@@ -1,10 +1,10 @@
 <?php
 
-if($argv[1] = "overwatch" OR $argv[1] = "LOL" OR $argv[1] = "CSGO" OR $argv[1] = "fornite"){
+if($argv[1] == "overwatch" OR $argv[1] == "LOL" OR $argv[1] == "CSGO" OR $argv[1] == "fornite"){
     print $argv[1]." est un jeux vidéo.\n";
 }
 
-if($argv[2] = "chien" OR $argv[2] = "chat" OR $argv[2] = "poulet" OR $argv[2] = "singe"){
+if($argv[2] == "chien" OR $argv[2] == "chat" OR $argv[2] == "poulet" OR $argv[2] == "singe"){
     print $argv[2]." est un animal.\n";
 }
 
