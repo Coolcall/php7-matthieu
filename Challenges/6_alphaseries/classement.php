@@ -20,7 +20,7 @@
 <body>
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="index.html">AlphaSeries</a>
+        <a class="navbar-brand" href="index.php">AlphaSeries</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,24 +29,24 @@
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="index.php">
                         <i class="fas fa-home"></i> Accueil
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="classement.html">
+                    <a class="nav-link" href="classement.php">
                         <i class="fas fa-trophy"></i> Classement
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="serie.html">
+                    <a class="nav-link" href="serie.php">
                         <i class="fas fa-random"></i> Une série aléatoire
                     </a>
                 </li>
             </ul>
 
             <!-- Formulaire de recherche -->
-            <form action="recherche.html" method="post" class="form-inline my-2 my-lg-0">
+            <form action="recherche.php" method="post" class="form-inline my-2 my-lg-0">
                 <input name="search" class="form-control mr-sm-2" type="text" placeholder="Rechercher une série" aria-label="Rechercher une série">
                 <button class="btn btn-outline-info my-2 my-sm-0" type="submit">
                     <i class="fa fa-search"></i> <span class="d-md-none">Rechercher</span>
@@ -77,7 +77,7 @@
                                 <th scope="col">Série</th>
                                 <th scope="col">
                                     Note
-                                    <a href="clasement.html"><i class="fa fa-sort-down"></i></a>
+                                    <a href="clasement.php"><i class="fa fa-sort-down"></i></a>
                                 </th>
                                 <th scope="col">
                                     Nombre de personnes qui regardent
@@ -88,7 +88,7 @@
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -102,7 +102,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -116,7 +116,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -130,7 +130,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -144,7 +144,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">5</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -158,7 +158,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">6</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -172,7 +172,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">7</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -186,7 +186,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">8</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -200,7 +200,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">9</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -214,7 +214,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">1</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -228,7 +228,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">10</th>
-                                <td><a href="serie.html">Game of Thrones</a></td>
+                                <td><a href="serie.php">Game of Thrones</a></td>
                                 <td>
                                     <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
                                         <i class="fa fa-star"></i>
@@ -246,13 +246,13 @@
                     <!-- BONUS Pagination -->
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="classement.html">&laquo;</a></li>
-                            <li class="page-item active"><a class="page-link" href="classement.html">1</a></li>
-                            <li class="page-item"><a class="page-link" href="classement.html">2</a></li>
-                            <li class="page-item"><a class="page-link" href="classement.html">3</a></li>
-                            <li class="page-item disabled"><a class="page-link" href="classement.html">…</a></li>
-                            <li class="page-item"><a class="page-link" href="classement.html">99</a></li>
-                            <li class="page-item"><a class="page-link" href="classement.html">&raquo;</a></li>
+                            <li class="page-item"><a class="page-link" href="classement.php">&laquo;</a></li>
+                            <li class="page-item active"><a class="page-link" href="classement.php">1</a></li>
+                            <li class="page-item"><a class="page-link" href="classement.php">2</a></li>
+                            <li class="page-item"><a class="page-link" href="classement.php">3</a></li>
+                            <li class="page-item disabled"><a class="page-link" href="classement.php">…</a></li>
+                            <li class="page-item"><a class="page-link" href="classement.php">99</a></li>
+                            <li class="page-item"><a class="page-link" href="classement.php">&raquo;</a></li>
                         </ul>
                     </nav>
                 </div>
