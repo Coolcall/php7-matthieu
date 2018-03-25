@@ -11,10 +11,7 @@ function random_banner() {
 
     $Banner = $randomBanner['images']['banner'];
 
-    return sprintf(
-        "$Banner"
-
-    );
+    return  $Banner;
 
 
 }

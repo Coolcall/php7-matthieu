@@ -1,6 +1,9 @@
 <?php
 
     require_once(__DIR__.'/src/random_banner.php');
+    require_once(__DIR__.'/src/mostpopularseries.php');
+    require_once(__DIR__.'/src/mostratedseries.php');
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -62,7 +65,7 @@
     <main role="main">
         <!-- Header -->
         <div class="jumbotron" style="position: relative">
-            <div class="jumbotron-background" style="background-image: url('<?= random_banner() ?>')"></div>
+            <div class="jumbotron-background" style="background-image: url(<?= random_banner()?>);"></div>
             <div class="container">
                 <h1 class="display-3">AlphaSeries</h1>
                 <p>Retrouvez les meilleures séries TV !</p>
@@ -79,28 +82,28 @@
                     <p>Les séries qui sont suivient par le plus de monde.</p>
                     <p>
                         <div class="card">
-                          <img class="card-img-top" src="https://www.betaseries.com/images/fonds/banner/1161_1502049726.jpg">
+                          <img class="card-img-top" src=<?=  MostPopularsSeries(0)['images']['banner']  ?>>
                           <div class="card-body">
-                              <h5 class="card-title">#1 - <a href="serie.php">Game of Thrones</a></h5>
-                              <p class="card-text">250 000 personnes regardent cette série.</p>
+                              <h5 class="card-title">#1 - <a href="serie.php"><?= MostPopularsSeries(0)['name']?></a></h5>
+                              <p class="card-text"><?= MostPopularsSeries(0)['statistics']['popularity']?> personnes regardent cette série.</p>
                           </div>
                         </div>
                     </p>
                     <p>
                         <div class="card">
-                          <img class="card-img-top" src="https://www.betaseries.com/images/fonds/banner/1275_1362953209.jpg">
+                          <img class="card-img-top" src=<?=  MostPopularsSeries(1)['images']['banner']  ?>>
                           <div class="card-body">
-                              <h5 class="card-title">#2 - <a href="serie.php">The Walking Dead</a></h5>
-                              <p class="card-text">175 000 personnes regardent cette série.</p>
+                              <h5 class="card-title">#2 - <a href="serie.php"><?= MostPopularsSeries(1)['name']?></a></h5>
+                              <p class="card-text"><?= MostPopularsSeries(1)['statistics']['popularity']?> personnes regardent cette série.</p>
                           </div>
                         </div>
                     </p>
                     <p>
                         <div class="card">
-                          <img class="card-img-top" src="https://www.betaseries.com/images/fonds/banner/481_1362330654.jpg">
+                          <img class="card-img-top" src=<?=  MostPopularsSeries(2)['images']['banner']  ?>>
                           <div class="card-body">
-                              <h5 class="card-title">#3 - <a href="serie.php">Breaking Bad</a></h5>
-                              <p class="card-text">150 000 personnes regardent cette série.</p>
+                              <h5 class="card-title">#3 - <a href="serie.php"><?= MostPopularsSeries(2)['name']?></a></h5>
+                              <p class="card-text"><?= MostPopularsSeries(2)['statistics']['popularity']?> personnes regardent cette série.</p>
                           </div>
                         </div>
                     </p>
@@ -117,28 +120,28 @@
                     <p>Les séries qui ont eu les meilleures notes.</p>
                     <p>
                         <div class="card">
-                          <img class="card-img-top" src="https://www.betaseries.com/images/fonds/banner/12196_1452765061.jpg">
+                          <img class="card-img-top" src=<?=MostRatedSeries(0)['images']['banner']?>>
                           <div class="card-body">
-                              <h5 class="card-title">#1 - <a href="serie.php">CHROMA</a></h5>
-                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée 4.80 / 5</p>
+                              <h5 class="card-title">#1 - <a href="serie.php"><?=MostRatedSeries(0)["name"]?></a></h5>
+                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée <?=round(MostRatedSeries(0)["statistics"]["rating"])?> / 5</p>
                           </div>
                         </div>
                     </p>
                     <p>
                         <div class="card">
-                          <img class="card-img-top" src="https://www.betaseries.com/images/fonds/banner/425_1363030684.jpg">
+                          <img class="card-img-top" src=<?=MostRatedSeries(1)['images']['banner']?>>
                           <div class="card-body">
-                              <h5 class="card-title">#2 - <a href="serie.php">The Wire</a></h5>
-                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée 4.75 / 5</p>
+                              <h5 class="card-title">#2 - <a href="serie.php"><?=MostRatedSeries(1)["name"]?></a></h5>
+                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée <?=round(MostRatedSeries(1)["statistics"]["rating"])?> / 5</p>
                           </div>
                         </div>
                     </p>
                     <p>
                         <div class="card">
-                          <img class="card-img-top" src="https://www.betaseries.com/images/fonds/banner/6323_1362236168.jpg">
+                          <img class="card-img-top" src=<?=MostRatedSeries(2)['images']['banner']?>>
                           <div class="card-body">
-                              <h5 class="card-title">#3 - <a href="serie.php">Crossed</a></h5>
-                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée 4.70 / 5</p>
+                              <h5 class="card-title">#3 - <a href="serie.php"><?=MostRatedSeries(2)["name"]?></a></h5>
+                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée <?=round(MostRatedSeries(2)["statistics"]["rating"])?> / 5</p>
                           </div>
                         </div>
                     </p>
