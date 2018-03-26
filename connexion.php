@@ -1,6 +1,21 @@
 <?php
+
+
 session_start();
- ?>
+if (!isset($_SESSION['history'])) {
+    $_SESSION['history'] = [];
+}
+$mail = 'Anonyme@mail.com';
+if (isset($_GET['mail'])) {
+    $mail = $_GET['mail'];
+}
+$_SESSION['history'][] = sprintf(
+    'Heure : %s - %s',
+    date('H:i:s'),
+    $mail
+);
+//session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
