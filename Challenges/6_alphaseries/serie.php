@@ -1,3 +1,6 @@
+<?php
+    require_once(__DIR__.'/src/new_series.php');
+ ?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -39,7 +42,7 @@
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="serie.php">
+                    <a class="nav-link" href="aleatoire.php">
                         <i class="fas fa-random"></i> Une série aléatoire
                     </a>
                 </li>
@@ -58,9 +61,9 @@
     <main role="main">
         <!-- Header -->
         <div class="jumbotron" style="position: relative">
-            <div class="jumbotron-background" style="background-image: url('https://www.betaseries.com/images/fonds/banner/6786_1395440671.jpg');"></div>
+            <div class="jumbotron-background" style="background-image: url(<?= new_series()["images"]["banner"]?>);"></div>
             <div class="container">
-                <h1 class="display-3">Rick and Morty</h1>
+                <h1 class="display-3"><?= new_series()["name"]?></h1>
             </div>
         </div>
 
@@ -70,7 +73,7 @@
 
                 <!-- Poster de la série -->
                 <div class="col-md-3 d-none d-md-block">
-                    <img src="https://www.betaseries.com/images/fonds/poster/275274.jpg" alt="Poster de Rick and Morty" class="img-thumbnail">
+                    <img src="<?= new_series()["images"]["poster"]?>" alt="Poster de <?= new_series()["name"]?>" class="img-thumbnail">
                 </div>
 
                 <!-- Fiche série -->
@@ -78,7 +81,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">
-                                Rick and Morty
+                                <?= new_series()["name"]?>
 
                                 <!-- Affichage de la note avec le bon nombre d'étoiles et un tooltip -->
                                 <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
@@ -89,21 +92,24 @@
                                     <i class="fa fa-star-half"></i>
                                 </span>
                             </h4>
-                            <h6 class="card-subtitle mb-2 text-muted">3 saisons, 38 épisodes</h6>
+                            <h6 class="card-subtitle mb-2 text-muted"><?= new_series()["statistics"]["season_count"]?> saisons, <?= new_series()["statistics"]["episode_count"]?> épisodes</h6>
                             <h5>
-                                16 867 personnes suivent la série
+                                <?= new_series()["statistics"]["popularity"]?> personnes suivent la série
                             </h5>
                             <p>
                                 <!-- Affichage des genres de la série -->
-                                <span class="badge badge-secondary">Adventure</span>
-                                <span class="badge badge-secondary">Animation</span>
-                                <span class="badge badge-secondary">Comedy</span>
-                                <small>sortie en 2013 chez Adult Swim</small>
+                                <span class="badge badge-secondary"><?php
+                                        for ($i = 0; $i < count(new_series()['genres']); $i++) {
+                                            $genre = new_series()['genres'][$i];
+                                            print " <span class='badge badge-secondary'>".$genre."</span>";
+                                        }
+                                ?></span>
+
+                                <small>sortie en <?= new_series()["release_year"]?> chez <?= new_series()["network"]?></small>
                             </p>
                             <p class="card-text">
-                                Rick, un vieil alcoolique déséquilibré et scientifique de génie, et Morty, son petit-fils qu'il entraîne dans des aventures extraordinaires, dangereuses, à travers l'espace et dans des univers parallêles. Rick a récemment renoué avec sa famille et vit désormais dans le garage de sa fille Beth, mettant jour après jour en péril la stabilité de la vie de Morty.
-                            </p>
-                            <a target="_blank" href="https://www.betaseries.com/serie/rick-and-morty" class="card-link">
+                                <?= new_series()["synopsis"]?>    </p>
+                            <a target="_blank" href="https://www.betaseries.com/serie/<?= new_series()["slug"]?>" class="card-link">
                                 <i class="fa fa-external-link-alt"></i>
                                 Voir la fiche sur BetaSeries
                             </a>
@@ -118,7 +124,7 @@
                         </div>
                         <div class="embed-responsive embed-responsive-21by9">
                             <!-- Vidéo youtube, pensez à remplacer opRwgY7RDP0 par l'id youtube de la vidéo -->
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/opRwgY7RDP0?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= new_series()["youtube_id"]?>?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>

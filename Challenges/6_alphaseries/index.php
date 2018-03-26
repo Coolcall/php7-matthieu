@@ -1,9 +1,9 @@
 <?php
 
-    require_once(__DIR__.'/src/random_banner.php');
+    require_once(__DIR__.'/src/random_series.php');
     require_once(__DIR__.'/src/mostpopularseries.php');
     require_once(__DIR__.'/src/mostratedseries.php');
-
+    require_once(__DIR__.'/src/new_series.php');
 ?>
 <!doctype html>
 <html lang="fr">
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="serie.php">
+                    <a class="nav-link" href="aleatoire.php">
                         <i class="fas fa-random"></i> Une série aléatoire
                     </a>
                 </li>
@@ -65,7 +65,7 @@
     <main role="main">
         <!-- Header -->
         <div class="jumbotron" style="position: relative">
-            <div class="jumbotron-background" style="background-image: url(<?= random_banner()?>);"></div>
+            <div class="jumbotron-background" style="background-image: url(<?= random_series()['images']['banner']?>);"></div>
             <div class="container">
                 <h1 class="display-3">AlphaSeries</h1>
                 <p>Retrouvez les meilleures séries TV !</p>
@@ -123,7 +123,7 @@
                           <img class="card-img-top" src=<?=MostRatedSeries(0)['images']['banner']?>>
                           <div class="card-body">
                               <h5 class="card-title">#1 - <a href="serie.php"><?=MostRatedSeries(0)["name"]?></a></h5>
-                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée <?=round(MostRatedSeries(0)["statistics"]["rating"])?> / 5</p>
+                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée <?=round(MostRatedSeries(0)["statistics"]["rating"],2)?> / 5</p>
                           </div>
                         </div>
                     </p>
@@ -132,7 +132,7 @@
                           <img class="card-img-top" src=<?=MostRatedSeries(1)['images']['banner']?>>
                           <div class="card-body">
                               <h5 class="card-title">#2 - <a href="serie.php"><?=MostRatedSeries(1)["name"]?></a></h5>
-                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée <?=round(MostRatedSeries(1)["statistics"]["rating"])?> / 5</p>
+                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée <?=round(MostRatedSeries(1)["statistics"]["rating"],2)?> / 5</p>
                           </div>
                         </div>
                     </p>
@@ -141,7 +141,7 @@
                           <img class="card-img-top" src=<?=MostRatedSeries(2)['images']['banner']?>>
                           <div class="card-body">
                               <h5 class="card-title">#3 - <a href="serie.php"><?=MostRatedSeries(2)["name"]?></a></h5>
-                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée <?=round(MostRatedSeries(2)["statistics"]["rating"])?> / 5</p>
+                              <p class="card-text"><i class="fa fa-star text-info"></i> La série est notée <?=round(MostRatedSeries(2)["statistics"]["rating"],2)?> / 5</p>
                           </div>
                         </div>
                     </p>
