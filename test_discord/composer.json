@@ -1,0 +1,13 @@
+{
+    "name": "matthieu/test_discord",
+    "type": "project",
+    "autoload": {
+     "psr-4": {
+         "": "src/"
+     }
+ },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    }
+
+}
